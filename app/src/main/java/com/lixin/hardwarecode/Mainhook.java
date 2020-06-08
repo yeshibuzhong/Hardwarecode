@@ -24,11 +24,11 @@ public class Mainhook implements IXposedHookLoadPackage {
 
             new Hook().HookTest(loadPackageParam); // 动态生效 不用重启
             new RootCloak().handleLoadPackage(loadPackageParam);
-//            new XBuild(loadPackageParam);  //build
-//            new Phone(loadPackageParam);  // TelephonyManager
-//            new Resolution().Display(loadPackageParam);  // 屏幕
-//            new OpenGL().OpenGLTest(loadPackageParam);   // 显卡
-//            new Cpuinfo(loadPackageParam);         // CPU*/
+            new XBuild(loadPackageParam);  //build  这里有问题，导致无法开机
+            new Phone(loadPackageParam);  // TelephonyManager
+//            new Resolution().Display(loadPackageParam);  // 屏幕  //导致launcher启动失败
+            new OpenGL().OpenGLTest(loadPackageParam);   // 显卡
+            new Cpuinfo(loadPackageParam);         // CPU*/
 
 
 

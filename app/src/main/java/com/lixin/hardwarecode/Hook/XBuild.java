@@ -111,30 +111,30 @@ public class XBuild {
         try {
 
             XposedHelpers.findField(Build.class, "BOARD").set(null, SharedPref.getXValue("board"));
-            XposedHelpers.findField(Build.class, "BRAND").set(null, SharedPref.getXValue("brand"));
-            XposedHelpers.findField(Build.class, "CPU_ABI").set(null, SharedPref.getXValue("ABI"));
+//            XposedHelpers.findField(Build.class, "BRAND").set(null, SharedPref.getXValue("brand"));  //无法打开软件
+//            XposedHelpers.findField(Build.class, "CPU_ABI").set(null, SharedPref.getXValue("ABI"));//无法打开软件
             XposedHelpers.findField(Build.class, "CPU_ABI2").set(null, SharedPref.getXValue("ABI2"));
             XposedHelpers.findField(Build.class, "DEVICE").set(null, SharedPref.getXValue("device"));
             XposedHelpers.findField(Build.class, "DISPLAY").set(null, SharedPref.getXValue("display"));
-            XposedHelpers.findField(Build.class, "FINGERPRINT").set(null, SharedPref.getXValue("fingerprint"));
-            XposedHelpers.findField(Build.class, "HARDWARE").set(null, SharedPref.getXValue("NAME"));
-            XposedHelpers.findField(Build.class, "ID").set(null, SharedPref.getXValue("ID"));
-            XposedHelpers.findField(Build.class, "MANUFACTURER").set(null, SharedPref.getXValue("Manufacture"));
+//            XposedHelpers.findField(Build.class, "FINGERPRINT").set(null, SharedPref.getXValue("fingerprint"));  //有问题
+//            XposedHelpers.findField(Build.class, "HARDWARE").set(null, SharedPref.getXValue("NAME")); //有问题
+//            XposedHelpers.findField(Build.class, "ID").set(null, SharedPref.getXValue("ID"));//有问题
+//            XposedHelpers.findField(Build.class, "MANUFACTURER").set(null, SharedPref.getXValue("Manufacture"));//无法打开软件
             XposedHelpers.findField(Build.class, "MODEL").set(null, SharedPref.getXValue("model"));
             XposedHelpers.findField(Build.class, "PRODUCT").set(null, SharedPref.getXValue("product"));
             XposedHelpers.findField(Build.class, "BOOTLOADER").set(null, SharedPref.getXValue("booltloader")); //主板引导程序
             XposedHelpers.findField(Build.class, "HOST").set(null, SharedPref.getXValue("host"));  // 设备主机地址
             XposedHelpers.findField(Build.class, "TAGS").set(null, SharedPref.getXValue("build_tags"));  //描述build的标签
-            XposedHelpers.findField(Build.class, "TYPE").set(null, SharedPref.getXValue("shenbei_type")); //设备版本类型
-           	XposedHelpers.findField(Build.VERSION.class, "INCREMENTAL").set(null, SharedPref.getXValue("incrementalincremental")); //源码控制版本号
-            XposedHelpers.findField(android.os.Build.VERSION.class, "RELEASE").set(null, SharedPref.getXValue("AndroidVer"));
+//            XposedHelpers.findField(Build.class, "TYPE").set(null, SharedPref.getXValue("shenbei_type")); //设备版本类型 //无法打开系统设置
+//           	XposedHelpers.findField(Build.VERSION.class, "INCREMENTAL").set(null, SharedPref.getXValue("incrementalincremental")); //源码控制版本号  //有问题
+//            XposedHelpers.findField(android.os.Build.VERSION.class, "RELEASE").set(null, SharedPref.getXValue("AndroidVer"));  //有问题
             XposedHelpers.findField(android.os.Build.VERSION.class, "SDK").set(null, SharedPref.getXValue("API"));
             XposedHelpers.findField(android.os.Build.VERSION.class, "CODENAME").set(null, "REL"); //写死就行 这个值为固定
-
-
-
+//
+//
+//
             XposedHelpers.findField(Build.class, "TIME").set(null,SharedPref.getintXValue("time"));  // 固件时间build
-            //	XposedHelpers.findField(Build.VERSION.class, "SDK_INT").set(null, pre.getInt("sdkint", 6));
+//            //	XposedHelpers.findField(Build.VERSION.class, "SDK_INT").set(null, pre.getInt("sdkint", 6)); //原来就是注释的
 
 
         } catch (Exception e) {
